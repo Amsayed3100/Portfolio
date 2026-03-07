@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Abu Sayed</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+
+  <!-- Boxicons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"/>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+ 
+  <header id="header">
+    <nav>
+      <a href="#home" class="logo">Abu <span>Sayed</span></a>
+
+      <ul class="nav-links">
+        <li><a href="#home" class="active">Home</a></li>
+        <li><a href="#about">About</a></li>
+       <li><a href="#education">Education</a></li>
+        <li><a href="#services">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+      <div class="nav-hamburger" id="hamburger">
+        <i class="bx bx-menu"></i>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#home"     onclick="closeMobile()">Home</a>
+    <a href="#about"    onclick="closeMobile()">About</a>
+    <a href="#services" onclick="closeMobile()">Skills</a>
+    <a href="#projects" onclick="closeMobile()">Projects</a>
+    <a href="#contact"  onclick="closeMobile()">Contact</a>
+  </div>
+
+  <section id="home">
+    <div class="wrap">
+      <div class="home-flex">
+
+        <!-- Left: Text Content -->
+        <div class="home-content anim from-left">
+          <p class="home-greeting">Hello, <em>I'm</em></p>
+          <h1 class="home-name">Abu Sayed</h1>
+          <p class="home-role"><span id="typed"></span><span class="typed-cursor">|</span></p>
+          <p class="home-desc">
+            Computer Science student at Metropolitan University with a passion for
+            web development and design. I build beautiful, responsive websites and
+            deliver quality projects with clean code.
+          </p>
+          <a href="#contact" class="btn">Download CV</a>
+
+          <div class="home-socials">
+            <a href="https://github.com/Amsayed3100" target="_blank" class="social-btn" title="GitHub">
+              <i class="bx bxl-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/abu-sayed-17793b282" target="_blank" class="social-btn" title="LinkedIn">
+              <i class="bx bxl-linkedin"></i>
+            </a>
+            <a href="https://www.facebook.com/sayeed.talukder.2025/" target="_blank" class="social-btn" title="Facebook">
+              <i class="bx bxl-facebook"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right: Hexagon Photo -->
+        <div class="anim from-right hex-right">
+          <div class="hex-container">
+            <div class="hex-inner">
+              <img src="https://i.postimg.cc/nhG4QLTz/Whats-App-Image-2026-03-07-at-12-49-28-AM.jpg" alt="">
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="wrap">
+      <div class="about-flex">
+        <div class="about-text anim from-right">
+          <p class="eyebrow">My <em>Intro</em></p>
+          <h2 class="section-heading">About Me</h2>
+          <p>
+            I'm Abu Sayed,a passionate Frontend Developer and
+            Computer Science student at Metropolitan University.
+            I create web pages with React. I have hands-on experience in HTML, CSS,
+            Tailwind CSS, JavaScript, and React.js — and I'm always learning and building new things.
+          </p>
+
+          <div class="about-stats">
+            <div class="stat-box">
+              <span class="stat-num">5+</span>
+              <p class="stat-lbl">Projects Built</p>
+            </div>
+            <div class="stat-box">
+              <span class="stat-num">5</span>
+              <p class="stat-lbl">Core Skills</p>
+            </div>
+            <div class="stat-box">
+              <span class="stat-num">2+</span>
+              <p class="stat-lbl">Years Coding</p>
+            </div>
+          </div>
+
+          <a href="#contact" class="btn">Contact Me</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+<!-- EDUCATION -->
+<section id="education">
+  <div class="wrap">
+
+    <p class="eyebrow">My <em>Journey</em></p>
+    <h2 class="section-heading">Education</h2>
+
+    <div class="education-timeline">
+
+      <div class="education-card">
+
+        <div class="edu-line">
+          <span class="edu-dot"></span>
+        </div>
+
+        <div class="edu-box">
+
+          <div class="edu-logo">
+            <img src="https://i.postimg.cc/kXL7WHWc/metropolitan-university-bangladesh-logo-png-seeklogo-386522.png">
+          </div>
+
+          <div class="edu-text">
+            <h3>BSc in CSE</h3>
+            <h4>Metropolitan University</h4>
+            <span class="edu-date">2023 – Present</span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+  <!SKILLS >
+
+  <section id="services">
+    <div class="wrap">
+      <div class="services-flex">
+        <div class="services-left anim from-left">
+          <p class="eyebrow">Favorite <em>Skills</em></p>
+          <h2 class="section-heading">My Skills</h2>
+          <p class="body-text">
+            See fully what skills I have and perform to develop the best projects for you.
+          </p>
+          <a href="#projects" class="btn">See Projects</a>
+        </div>
+
+        <div class="skills-list stagger anim from-right">
+          <div class="skill-row"><span class="sk-num">01.</span><span class="sk-name">HTML & CSS</span></div>
+          <div class="skill-row"><span class="sk-num">02.</span><span class="sk-name">JavaScript</span></div>
+          <div class="skill-row"><span class="sk-num">03.</span><span class="sk-name">Tailwind CSS</span></div>
+          <div class="skill-row"><span class="sk-num">04.</span><span class="sk-name">React.js</span></div>
+           <div class="skill-row"><span class="sk-num">05.</span><span class="sk-name">Git & GitHub</span></div>
+          <div class="skill-row"><span class="sk-num">06.</span><span class="sk-name">REST APIs</span></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!PROJECTS>
+  <section id="projects">
+    <div class="wrap">
+
+      <div class="projects-head anim from-bottom">
+        <h2 class="section-heading">Projects</h2>
+      </div>
+
+      <div class="proj-grid stagger">
+
+        <div class="proj-card">
+          <div class="proj-thumb p1">🔢</div>
+          <div class="proj-overlay">
+          
+            <p class="proj-title">Word Counter</p>
+            <a href="https://github.com/Amsayed3100/word-counter/blob/main/README.md?plain=1" class="proj-link">View<i class="bx bx-link-external"></i></a>
+          </div>
+        </div>
+
+        <div class="proj-card">
+          <div class="proj-thumb p2">☁️</div>
+          <div class="proj-overlay">
+            <p class="proj-title">Weather App</p>
+            <a href="https://github.com/Amsayed3100/Weather-App" target="_blank" class="proj-link">View<i class="bx bx-link-external"></i></a>
+          </div>
+        </div>
+
+        <div class="proj-card">
+          <div class="proj-thumb p3">✅</div>
+          <div class="proj-overlay">
+            <p class="proj-title">Tic-Tac-Toe</p>
+            <a href="https://github.com/Amsayed3100/Tic-Tac-Toe-Game" target="_blank" class="proj-link">View<i class="bx bx-link-external"></i></a>
+          </div>
+        </div>
+
+    
+        <div class="proj-card">
+          <div class="proj-thumb p5">📱</div>
+          <div class="proj-overlay">
+            <p class="proj-title">Telegram ChatBot</p>
+            <a href="https://github.com/Amsayed3100/CampusMate-An-Interactive-AI-Powered-Conversation-Bot" class="proj-link">View<i class="bx bx-link-external"></i></a>
+          </div>
+        </div>
+
+        <div class="proj-card">
+          <div class="proj-thumb p6">📊</div>
+          <div class="proj-overlay">
+            <p class="proj-title">Demo Portfolio</p>
+            <a href="https://github.com/Amsayed3100/Demo-Protfolio/tree/master/src" class="proj-link">View<i class="bx bx-link-external"></i></a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!   CONTACT
+>
+  <section id="contact">
+    <div class="wrap">
+      <div class="contact-flex">
+
+        <!-- Left: Contact Info -->
+        <div class="contact-info anim from-left">
+          <p class="eyebrow">Get In <em>Touch</em></p>
+          <h2 class="section-heading">Contact Me</h2>
+          <p>
+            I'm currently open to new opportunities, freelance projects, and collaborations.
+            Whether you have a question or just want to say hi — my inbox is always open!
+          </p>
+
+          <div class="contact-detail">
+            <div class="c-icon"><i class="bx bx-envelope"></i></div>
+            <div class="c-detail-text">
+              <span class="c-lbl">Email</span>
+              <span class="c-val">sayedsyl120@email.com</span>
+            </div>
+          </div>
+
+          <div class="contact-detail">
+            <div class="c-icon"><i class="bx bx-map"></i></div>
+            <div class="c-detail-text">
+              <span class="c-lbl">Location</span>
+              <span class="c-val">Sylhet,Bangladesh</span>
+            </div>
+          </div>
+
+          <div class="contact-detail">
+            <div class="c-icon"><i class="bx bx-building"></i></div>
+            <div class="c-detail-text">
+              <span class="c-lbl">University</span>
+              <span class="c-val">Metropolitan University</span>
+            </div>
+          </div>
+
+          <div class="contact-social">
+            <a href="https://github.com/Amsayed3100"   target="_blank" class="social-btn"><i class="bx bxl-github"></i></a>
+            <a href="https://www.linkedin.com/in/abu-sayed-17793b282" target="_blank" class="social-btn"><i class="bx bxl-linkedin"></i></a>
+            <a href="https://www.facebook.com/sayeed.talukder.2025/" target="_blank" class="social-btn"><i class="bx bxl-facebook"></i></a>
+            
+          </div>
+        </div>
+
+        <!-- Right: Contact Form -->
+        <div class="anim from-right">
+          <form class="contact-form" id="contactForm">
+            <div class="form-row">
+              <div class="field">
+                <label>Your Name</label>
+                <input type="text" placeholder="Enter your name" required/>
+              </div>
+              <div class="field">
+                <label>Your Email</label>
+                <input type="email" placeholder="Enter your email" required/>
+              </div>
+            </div>
+            <div class="field">
+              <label>Subject</label>
+              <input type="text" placeholder="Project subject"/>
+            </div>
+            <div class="field">
+              <label>Message</label>
+              <textarea placeholder="Write your message here..."></textarea>
+            </div>
+            <button type="submit" class="submit-btn" id="submitBtn">
+              <i class="bx bx-send">Send Message</i> 
+            </button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <script src="script.js"></script>
+
+</body>
+</html>
