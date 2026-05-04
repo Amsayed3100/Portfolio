@@ -13,6 +13,12 @@
 
   <!-- Custom CSS -->
   <link rel="stylesheet" href="style.css"/>
+  <noscript>
+    <style>
+      /* Ensure content is visible when JS is disabled */
+      .anim, .stagger { opacity: 1 !important; transform: none !important; }
+    </style>
+  </noscript>
 </head>
 <body>
 
@@ -176,12 +182,67 @@
         </div>
 
         <div class="skills-list stagger anim from-right">
-          <div class="skill-row"><span class="sk-num">01.</span><span class="sk-name">HTML & CSS</span></div>
-          <div class="skill-row"><span class="sk-num">02.</span><span class="sk-name">JavaScript</span></div>
-          <div class="skill-row"><span class="sk-num">03.</span><span class="sk-name">Tailwind CSS</span></div>
-          <div class="skill-row"><span class="sk-num">04.</span><span class="sk-name">React.js</span></div>
-           <div class="skill-row"><span class="sk-num">05.</span><span class="sk-name">Git & GitHub</span></div>
-          <div class="skill-row"><span class="sk-num">06.</span><span class="sk-name">REST APIs</span></div>
+          <div class="skills-header"></div>
+
+        <div class="skill-row-section">
+          <strong class="row-title">Programming Languages</strong>
+          <ul class="skill-chips">
+            <li class="skill-item skill-c"><img class="skill-logo" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/c/c-original.svg" alt="c">C</li>
+            <li class="skill-item skill-cpp"><img class="skill-logo" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/cplusplus/cplusplus-original.svg" alt="cpp">C++</li>
+            <li class="skill-item skill-java"><img class="skill-logo" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg" alt="java">Java</li>
+            <li class="skill-item skill-python"><img class="skill-logo" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="py">Python</li>
+          </ul>
+        </div>
+
+        <div class="skill-row-section">
+          <strong class="row-title">Frontend</strong>
+          <ul class="skill-chips">
+            <li class="skill-item skill-html"><img class="skill-logo" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg" alt="html">HTML</li>
+            <li class="skill-item skill-css"><img class="skill-logo" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg" alt="css">CSS</li>
+            <li class="skill-item skill-tailwind"><img class="skill-logo" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/tailwindcss/tailwindcss-plain.svg" alt="tailwind">Tailwind CSS</li>
+            <li class="skill-item skill-javascript"><img class="skill-logo" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="js">JavaScript</li>
+            <li class="skill-item skill-react"><img class="skill-logo" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg" alt="react">React.js</li>
+          </ul>
+        </div>
+
+        <div class="skill-row-section">
+          <strong class="row-title">Backend & Frameworks</strong>
+          <ul class="skill-chips">
+            <li class="skill-item skill-django"><img class="skill-logo" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/django/django-original.svg" alt="django">Django</li>
+          </ul>
+        </div>
+
+        <div class="skill-row-section">
+          <strong class="row-title">Databases</strong>
+          <ul class="skill-chips">
+            <li class="skill-item skill-mysql"><img class="skill-logo" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original.svg" alt="mysql">MySQL</li>
+            <li class="skill-item skill-postgres"><img class="skill-logo" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original.svg" alt="postgres">PostgreSQL</li>
+          </ul>
+        </div>
+
+        <div class="skill-row-section">
+          <strong class="row-title">Version Control</strong>
+          <ul class="skill-chips">
+            <li class="skill-item skill-git"><img class="skill-logo" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/git/git-original.svg" alt="git">Git</li>
+            <li class="skill-item skill-github"><img class="skill-logo" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/github/github-original.svg" alt="gh">GitHub</li>
+          </ul>
+        </div>
+
+        <div class="skill-row-section">
+          <strong class="row-title">Tools</strong>
+          <ul class="skill-chips">
+            <li class="skill-item skill-vscode"><img class="skill-logo" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/vscode/vscode-original.svg" alt="vscode">VSCode</li>
+          </ul>
+        </div>
+
+        <div class="skill-row-section">
+          <strong class="row-title">APIs & Integration</strong>
+          <ul class="skill-chips">
+            <li class="skill-item skill-restapi"><img class="skill-logo" src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/swagger.svg" alt="rest">REST API</li>
+            <li class="skill-item skill-gemini"><svg class="skill-logo" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="10" fill="#00bfa5"/><path d="M7 12h10" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Gemini API</li>
+          </ul>
+        </div>
+
         </div>
 
       </div>
@@ -198,47 +259,92 @@
 
       <div class="proj-grid stagger">
 
-        <div class="proj-card">
-          <div class="proj-thumb p1">🔢</div>
-          <div class="proj-overlay">
-          
-            <p class="proj-title">Word Counter</p>
-            <a href="https://github.com/Amsayed3100/word-counter/blob/main/README.md?plain=1" class="proj-link">View<i class="bx bx-link-external"></i></a>
+        <article class="proj-card p1">
+          <div class="proj-thumb p1" aria-hidden="true">
+            <div class="proj-logo" aria-hidden="true">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="4" width="14" height="16" rx="2" fill="rgba(255,255,255,0.95)"/><path d="M7 8h6" stroke="#0b0b0b" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
           </div>
-        </div>
+          <span class="proj-badge">Featured</span>
+          <div class="proj-body">
+            <h3 class="proj-title">Word Counter</h3>
+            <p class="proj-desc">A lightweight web utility to count words, characters and provide reading time. Built with vanilla JavaScript and modern accessible UI patterns.</p>
+            <div class="proj-tags">
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>JavaScript</span>
+            </div>
+            <div class="proj-actions">
+              <a href="https://github.com/Amsayed3100/word-counter/blob/main/README.md?plain=1" target="_blank" class="btn-outline">Repository</a>
+            </div>
+          </div>
+        </article>
 
-        <div class="proj-card">
-          <div class="proj-thumb p2">☁️</div>
-          <div class="proj-overlay">
-            <p class="proj-title">Weather App</p>
-            <a href="https://github.com/Amsayed3100/Weather-App" target="_blank" class="proj-link">View<i class="bx bx-link-external"></i></a>
+        <article class="proj-card p2">
+          <div class="proj-thumb p2" aria-hidden="true">
+            <div class="proj-logo" aria-hidden="true">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20 17.5A4.5 4.5 0 0 0 15.5 13H15a4 4 0 1 0-7.9.9" stroke="rgba(255,255,255,0.95)" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
           </div>
-        </div>
+          <div class="proj-body">
+            <h3 class="proj-title">Weather App</h3>
+            <p class="proj-desc">Responsive weather dashboard fetching live data from a public API. Features location search, error handling and mobile-first design.</p>
+            <div class="proj-tags">
+              <span>HTML</span>
+              <span>Tailwind CSS</span>
+              <span>API</span>
+            </div>
+            <div class="proj-actions">
+              <a href="https://github.com/Amsayed3100/Weather-App" target="_blank" class="btn-outline">Repository</a>
+            </div>
+          </div>
+        </article>
 
-        <div class="proj-card">
-          <div class="proj-thumb p3">✅</div>
-          <div class="proj-overlay">
-            <p class="proj-title">Tic-Tac-Toe</p>
-            <a href="https://github.com/Amsayed3100/Tic-Tac-Toe-Game" target="_blank" class="proj-link">View<i class="bx bx-link-external"></i></a>
+        <article class="proj-card p3">
+          <div class="proj-thumb p3" aria-hidden="true">
+            <div class="proj-logo" aria-hidden="true">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 13l4 4L20 6" stroke="rgba(255,255,255,0.95)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
           </div>
-        </div>
+          <div class="proj-body">
+            <h3 class="proj-title">Tic-Tac-Toe</h3>
+            <p class="proj-desc">Classic Tic-Tac-Toe game with an AI opponent and score persistence. Demonstrates component-based logic and clean state management.</p>
+            <div class="proj-tags">
+              <span>React.js</span>
+              <span>Tailwind CSS</span>
+              <span>JavaScript</span>
+            </div>
+            <div class="proj-actions"><a href="https://github.com/Amsayed3100/Tic-Tac-Toe-Game" target="_blank" class="btn-outline">Repository</a></div>
+          </div>
+        </article>
 
-    
-        <div class="proj-card">
-          <div class="proj-thumb p5">📱</div>
-          <div class="proj-overlay">
-            <p class="proj-title">Telegram ChatBot</p>
-            <a href="https://github.com/Amsayed3100/CampusMate-An-Interactive-AI-Powered-Conversation-Bot" class="proj-link">View<i class="bx bx-link-external"></i></a>
+        <article class="proj-card p5">
+          <div class="proj-thumb p5" aria-hidden="true">
+            <div class="proj-logo" aria-hidden="true">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="6" y="3" width="12" height="18" rx="2" fill="rgba(255,255,255,0.95)"/><circle cx="12" cy="18" r="1" fill="#0b0b0b"/></svg>
+            </div>
           </div>
-        </div>
+          <div class="proj-body">
+            <h3 class="proj-title">Telegram ChatBot</h3>
+            <p class="proj-desc">An interactive AI-powered chatbot for Telegram, integrating external APIs and handling conversational flows.</p>
+            <div class="proj-tags"><span>Python</span><span>APIs</span><span>Bot</span></div>
+            <div class="proj-actions"><a href="https://github.com/Amsayed3100/CampusMate-An-Interactive-AI-Powered-Conversation-Bot" target="_blank" class="btn-outline">Repository</a></div>
+          </div>
+        </article>
 
-        <div class="proj-card">
-          <div class="proj-thumb p6">📊</div>
-          <div class="proj-overlay">
-            <p class="proj-title">Demo Portfolio</p>
-            <a href="https://github.com/Amsayed3100/Demo-Protfolio/tree/master/src" class="proj-link">View<i class="bx bx-link-external"></i></a>
+        <article class="proj-card p6">
+          <div class="proj-thumb p6" aria-hidden="true">
+            <div class="proj-logo" aria-hidden="true">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 12h4l3-6 4 12 3-8h3" stroke="rgba(255,255,255,0.95)" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
           </div>
-        </div>
+          <div class="proj-body">
+            <h3 class="proj-title">Demo Portfolio</h3>
+            <p class="proj-desc">A portfolio template demonstrating responsive layout, animations and deploy-ready assets.</p>
+            <div class="proj-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+            <div class="proj-actions"><a href="https://github.com/Amsayed3100/Demo-Protfolio/tree/master/src" target="_blank" class="btn-outline">Repository</a></div>
+          </div>
+        </article>
 
       </div>
     </div>
