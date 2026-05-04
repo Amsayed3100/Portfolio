@@ -44,6 +44,26 @@ button {
   --txt-dim:     #8892b0;
   --white:       #ffffff;
   --nav-h:       70px;
+
+  /* Skill colors */
+  --clr-python: #3776AB; --clr-python-dim: rgba(55,118,171,0.10); --clr-python-glow: rgba(55,118,171,0.18);
+  --clr-c: #555555; --clr-c-dim: rgba(85,85,85,0.10); --clr-c-glow: rgba(85,85,85,0.16);
+  --clr-cpp: #00599C; --clr-cpp-dim: rgba(0,89,156,0.10); --clr-cpp-glow: rgba(0,89,156,0.16);
+  --clr-java: #b07219; --clr-java-dim: rgba(176,114,25,0.10); --clr-java-glow: rgba(176,114,25,0.16);
+  --clr-js: #f7df1e; --clr-js-dim: rgba(247,223,30,0.10); --clr-js-glow: rgba(247,223,30,0.16);
+  --clr-react: #61DAFB; --clr-react-dim: rgba(97,218,251,0.08); --clr-react-glow: rgba(97,218,251,0.16);
+  --clr-django: #092E20; --clr-django-dim: rgba(9,46,32,0.10); --clr-django-glow: rgba(9,46,32,0.18);
+  --clr-numpy: #013243; --clr-numpy-dim: rgba(1,50,67,0.10); --clr-numpy-glow: rgba(1,50,67,0.16);
+  --clr-git: #F1502F; --clr-git-dim: rgba(241,80,47,0.10); --clr-git-glow: rgba(241,80,47,0.16);
+  --clr-github: #24292F; --clr-github-dim: rgba(36,41,47,0.10); --clr-github-glow: rgba(36,41,47,0.16);
+  --clr-vscode: #007ACC; --clr-vscode-dim: rgba(0,122,204,0.10); --clr-vscode-glow: rgba(0,122,204,0.16);
+  --clr-rest: #8e44ad; --clr-rest-dim: rgba(142,68,173,0.10); --clr-rest-glow: rgba(142,68,173,0.16);
+  --clr-gemini: #00bfa5; --clr-gemini-dim: rgba(0,191,165,0.10); --clr-gemini-glow: rgba(0,191,165,0.16);
+  --clr-mysql: #00758F; --clr-mysql-dim: rgba(0,117,143,0.10); --clr-mysql-glow: rgba(0,117,143,0.16);
+  --clr-postgres: #336791; --clr-postgres-dim: rgba(51,103,145,0.10); --clr-postgres-glow: rgba(51,103,145,0.16);
+  --clr-html: #e34f26; --clr-html-dim: rgba(227,79,38,0.10); --clr-html-glow: rgba(227,79,38,0.16);
+  --clr-css: #264de4; --clr-css-dim: rgba(38,77,228,0.08); --clr-css-glow: rgba(38,77,228,0.16);
+  --clr-tailwind: #38b2ac; --clr-tailwind-dim: rgba(56,178,172,0.08); --clr-tailwind-glow: rgba(56,178,172,0.16);
 }
 
 ::-webkit-scrollbar {
@@ -583,8 +603,9 @@ section {
 .skills-list {
   flex: 1;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(4, minmax(160px, 1fr));
   gap: 0 3.5rem;
+  align-items: start;
 }
 
 .skill-row {
@@ -598,6 +619,129 @@ section {
 .skill-row:last-child {
   border-bottom: none;
 }
+
+/* Sectioned skills layout */
+.skills-sections {
+  display: block;
+}
+
+.skill-section {
+  /* legacy */
+}
+
+.skill-section h3 {
+  font-size: 1rem;
+  margin-bottom: 0.6rem;
+  color: var(--white);
+  font-weight: 700;
+}
+
+.skill-section ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.skill-item {
+  padding: 0.45rem 0.6rem;
+  border-radius: 0.45rem;
+  color: var(--txt-dim);
+  font-weight: 600;
+  background: transparent;
+  transition: background 0.22s, color 0.22s, transform 0.22s;
+}
+
+/* Row-wise skills layout */
+.skills-header { display:flex; align-items:center; gap:0.8rem; margin-bottom:1rem; }
+.skills-title { font-size:1.05rem; color:var(--white); margin:0; font-weight:800; }
+
+/* skill logo (small) */
+.skill-logo { width:20px; height:20px; display:inline-block; object-fit:contain; filter: none; }
+
+.skill-row-section { display:flex; align-items:flex-start; gap:1.2rem; margin-bottom:0.9rem; flex-wrap:wrap; }
+.row-title { min-width:110px; color:var(--white); font-weight:700; display:block; margin-top:6px; }
+.skill-chips { display:flex; gap:0.6rem; flex-wrap:wrap; list-style:none; padding:0; margin:0; }
+
+/* Hover: use each skill's main color as background and white text for contrast */
+.skill-item.skill-python:hover { background: var(--clr-python); color: #fff; box-shadow: 0 10px 28px var(--clr-python-glow); }
+.skill-item.skill-c:hover { background: var(--clr-c); color: #fff; box-shadow: 0 10px 28px var(--clr-c-glow); }
+.skill-item.skill-cpp:hover { background: var(--clr-cpp); color: #fff; box-shadow: 0 10px 28px var(--clr-cpp-glow); }
+.skill-item.skill-java:hover { background: var(--clr-java); color: #fff; box-shadow: 0 10px 28px var(--clr-java-glow); }
+.skill-item.skill-javascript:hover { background: var(--clr-js); color: #0b0b0b; box-shadow: 0 10px 28px var(--clr-js-glow); }
+.skill-item.skill-react:hover { background: var(--clr-react); color: #0b0b0b; box-shadow: 0 10px 28px var(--clr-react-glow); }
+.skill-item.skill-django:hover { background: var(--clr-django); color: #fff; box-shadow: 0 10px 28px var(--clr-django-glow); }
+.skill-item.skill-numpy:hover { background: var(--clr-numpy); color: #fff; box-shadow: 0 10px 28px var(--clr-numpy-glow); }
+.skill-item.skill-git:hover { background: var(--clr-git); color: #fff; box-shadow: 0 10px 28px var(--clr-git-glow); }
+.skill-item.skill-github:hover { background: var(--clr-github); color: #fff; box-shadow: 0 10px 28px var(--clr-github-glow); }
+.skill-item.skill-vscode:hover { background: var(--clr-vscode); color: #fff; box-shadow: 0 10px 28px var(--clr-vscode-glow); }
+.skill-item.skill-restapi:hover { background: var(--clr-rest); color: #fff; box-shadow: 0 10px 28px var(--clr-rest-glow); }
+.skill-item.skill-gemini:hover { background: var(--clr-gemini); color: #fff; box-shadow: 0 10px 28px var(--clr-gemini-glow); }
+.skill-item.skill-mysql:hover { background: var(--clr-mysql); color: #fff; box-shadow: 0 10px 28px var(--clr-mysql-glow); }
+.skill-item.skill-postgresql:hover { background: var(--clr-postgres); color: #fff; box-shadow: 0 10px 28px var(--clr-postgres-glow); }
+.skill-item.skill-postgres:hover { background: var(--clr-postgres); color: #fff; box-shadow: 0 10px 28px var(--clr-postgres-glow); }
+.skill-item.skill-html:hover { background: var(--clr-html); color: #fff; box-shadow: 0 10px 28px var(--clr-html-glow); }
+/* CSS and Tailwind hover colors */
+.skill-item.skill-css:hover { background: var(--clr-css); color: #fff; box-shadow: 0 10px 28px var(--clr-css-glow); }
+.skill-item.skill-tailwind:hover { background: var(--clr-tailwind); color: #071017; box-shadow: 0 10px 28px var(--clr-tailwind-glow); }
+/* end skill-item hover rules */
+
+/* Debug: ensure skills-list is visible by default (will not affect final design) */
+.skills-list, .skills-list * { opacity: 1 !important; transform: none !important; }
+
+@media (max-width: 1100px) {
+  .skills-sections { grid-template-columns: repeat(2, 1fr); }
+  .skills-list { grid-template-columns: repeat(3, minmax(140px, 1fr)); }
+}
+
+@media (max-width: 600px) {
+  .skills-sections { grid-template-columns: 1fr; }
+  .skills-list { grid-template-columns: 1fr; }
+}
+
+/* Responsive improvements for skills section */
+@media (max-width: 900px) {
+  .services-flex { flex-direction: column; gap: 2rem; }
+  .services-left { flex: 0 0 auto; width: 100%; }
+  .skills-list { grid-template-columns: repeat(2, 1fr); gap: 1.25rem 0; }
+  .row-title { min-width: 90px; }
+}
+
+@media (max-width: 600px) {
+  .services-left { padding-bottom: 0.5rem; }
+  .skill-chips { gap: 0.45rem; }
+  .skill-item { padding: 0.4rem 0.55rem; font-size: 0.92rem; }
+  .skill-logo { width:18px; height:18px; }
+  .row-title { min-width: 70px; font-size: 0.95rem; }
+}
+
+/* clear visual separators on small screens */
+.skill-row-section { border-bottom: 1px solid rgba(255,255,255,0.03); padding-bottom: 0.7rem; }
+.skill-row-section:last-child { border-bottom: none; }
+
+/* Desktop: present skills as vertical column stacks to take horizontal space */
+@media (min-width: 1000px) {
+  .services-flex { align-items: flex-start; }
+  .services-left { flex: 0 0 360px; }
+  /* skills-list becomes a single-column stack of rows on desktop (right side) */
+  .skills-list { grid-template-columns: 1fr; gap: 0 3rem; }
+
+  /* Row-wise layout: title on left, chips on right */
+  .skill-row-section { display: flex; align-items: center; gap: 1.25rem; padding: 0.9rem 0; margin-bottom: 0.6rem; border-bottom: 1px solid rgba(255,255,255,0.03); }
+  .skill-row-section:last-child { border-bottom: none; }
+
+  .row-title { min-width: 180px; color:var(--white); font-weight:700; margin:0; }
+  .skill-chips { display: flex; gap: 0.6rem; flex-wrap: wrap; align-items: center; }
+
+  /* Chips layout and sizing for desktop rows */
+  .skill-chips .skill-item { display: inline-flex; align-items: center; gap: 0.6rem; padding: 0.6rem 0.9rem; border-radius: 0.5rem; background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.03); }
+
+  /* Slightly larger logos on desktop */
+  .skill-logo { width: 20px; height: 20px; }
+}
+
+/* Improve readability of skill chips */
+.skill-chips .skill-item { background: rgba(255,255,255,0.02); padding: 0.45rem 0.75rem; border: 1px solid rgba(255,255,255,0.03); border-radius: 0.5rem; display:flex; align-items:center; gap:0.6rem; color:var(--txt); }
+.skill-chips .skill-item img, .skill-chips .skill-item svg { display:inline-block; }
 
 .sk-num {
   font-size: 0.78rem;
@@ -636,32 +780,120 @@ section {
 .proj-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1.1rem;
+  gap: 1.25rem;
 }
 
 .proj-card {
-  position: relative;
+  display: flex;
+  flex-direction: column;
   border-radius: 0.75rem;
   overflow: hidden;
-  aspect-ratio: 4 / 3;
-  background: var(--bg-card);
-  cursor: pointer;
-  border: 1px solid rgba(255, 255, 255, 0.04);
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  border: 1px solid rgba(255,255,255,0.04);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .proj-thumb {
-  width: 100%;
-  height: 100%;
+  height: 160px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 3.5rem;
-  transition: transform 0.45s ease;
+  background-size: cover;
+  background-position: center;
 }
 
-.proj-card:hover .proj-thumb {
-  transform: scale(1.08);
+/* colorful overlay and 3D-perspective logos */
+.proj-thumb { position: relative; perspective: 900px; overflow: hidden; }
+.proj-thumb::before { content: ''; position: absolute; inset: 0; opacity: 0; transition: opacity 320ms ease; pointer-events: none; mix-blend-mode: screen; }
+.proj-thumb .proj-logo { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%) translateZ(0) rotateX(0) rotateY(0); z-index: 3; transition: transform 420ms cubic-bezier(.2,.9,.3,1); }
+.proj-thumb .proj-logo svg { width: 56px; height: 56px; display:block; shape-rendering: geometricPrecision; backface-visibility: hidden; }
+
+.proj-card:hover .proj-thumb::before { opacity: 0.28; }
+.proj-card:hover .proj-thumb .proj-logo { transform: translate(-50%, -50%) translateZ(20px) rotateX(12deg) rotateY(-8deg); }
+
+/* per-project overlay gradients (colorful) */
+.proj-thumb.p1::before { background: linear-gradient(135deg, rgba(11,203,139,0.16), rgba(44,120,255,0.12)); }
+.proj-thumb.p2::before { background: linear-gradient(135deg, rgba(56,178,172,0.16), rgba(88,126,255,0.12)); }
+.proj-thumb.p3::before { background: linear-gradient(135deg, rgba(247,223,30,0.16), rgba(255,120,80,0.08)); }
+.proj-thumb.p5::before { background: linear-gradient(135deg, rgba(96,165,250,0.12), rgba(139,92,246,0.12)); }
+.proj-thumb.p6::before { background: linear-gradient(135deg, rgba(255,108,108,0.12), rgba(255,178,55,0.10)); }
+
+/* colorful logo backgrounds behind the SVGs */
+.proj-logo { position: relative; display:inline-block; }
+.proj-logo::before { content: ''; position: absolute; inset: -6px; z-index: 1; border-radius: 10px; opacity: 0.98; transition: transform 360ms ease, opacity 260ms ease; }
+.proj-card.p1 .proj-logo::before { background: linear-gradient(135deg,#0bc98b,#2c78ff); transform: scale(1); }
+.proj-card.p2 .proj-logo::before { background: linear-gradient(135deg,#38b2ac,#587eff); }
+.proj-card.p3 .proj-logo::before { background: linear-gradient(135deg,#f7df1e,#ff7850); }
+.proj-card.p5 .proj-logo::before { background: linear-gradient(135deg,#60a5fa,#8b5cf6); }
+.proj-card.p6 .proj-logo::before { background: linear-gradient(135deg,#ff6c6c,#ffb237); }
+
+/* tags colored per project (subtle) */
+.proj-card.p1 .proj-tags span { background: rgba(11,203,139,0.12); color: #eafff6; border-color: rgba(11,203,139,0.14); }
+.proj-card.p2 .proj-tags span { background: rgba(88,126,255,0.10); color: #eef4ff; border-color: rgba(88,126,255,0.12); }
+.proj-card.p3 .proj-tags span { background: rgba(247,223,30,0.10); color: #f8f8f8; border-color: rgba(247,223,30,0.12); }
+.proj-card.p5 .proj-tags span { background: rgba(139,92,246,0.10); color: #f4eeff; border-color: rgba(139,92,246,0.12); }
+.proj-card.p6 .proj-tags span { background: rgba(255,108,108,0.10); color: #fff6ee; border-color: rgba(255,108,108,0.12); }
+
+/* make repo button colorful on hover */
+.btn-outline:hover { background: linear-gradient(90deg,var(--green),#3aa0ff); border-color: transparent; color: #021012; transform: translateY(-2px); box-shadow: 0 10px 30px rgba(10,150,120,0.12); }
+
+/* Remove colored logo backgrounds: keep logos crisp with no colored pill behind them */
+.proj-logo::before {
+  background: transparent !important;
+  opacity: 0 !important;
+  transform: none !important;
+  box-shadow: none !important;
 }
+
+/* If individual project rules reintroduce colors, override them here */
+.proj-card .proj-logo::before { background: transparent !important; }
+
+/* Keep Tic-Tac-Toe tags visually stable on hover (no highlight) */
+
+
+/* Ensure persistent tech badges for Tic-Tac-Toe do not change on hover */
+.proj-card.p3 .proj-tech .tech-item { background: rgba(247,223,30,0.06); color: #222; border-color: rgba(247,223,30,0.08); }
+.proj-card.p3:hover .proj-tech .tech-item { background: rgba(247,223,30,0.06) !important; color: #222 !important; border-color: rgba(247,223,30,0.08) !important; box-shadow: none !important; }
+
+.proj-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 24px 48px rgba(2,6,23,0.45);
+}
+
+
+/* Hover overlay + reveal system */
+.proj-card {
+  position: relative;
+}
+
+.proj-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(6,14,28,0.02), rgba(3,8,18,0.16));
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 280ms ease;
+}
+.proj-card:hover::after { opacity: 1; }
+
+.proj-thumb { transition: transform 450ms cubic-bezier(.2,.9,.3,1), filter 350ms ease; }
+.proj-card:hover .proj-thumb { transform: scale(1.06) rotate(-0.6deg); filter: brightness(1.05) saturate(1.03); }
+
+/* actions hidden until hover/focus */
+.proj-actions .btn-outline { opacity: 0; transform: translateY(8px); transition: opacity 260ms ease, transform 260ms ease; }
+.proj-card:hover .proj-actions .btn-outline,
+.proj-card:focus-within .proj-actions .btn-outline { opacity: 1; transform: translateY(0); }
+
+/* tag highlight on hover */
+.proj-card:hover .proj-tags span { background: rgba(12,188,139,0.12); color: var(--white); border-color: rgba(12,188,139,0.14); box-shadow: 0 6px 18px rgba(12,188,139,0.06); }
+.proj-tags span { transition: background 220ms ease, color 220ms ease, box-shadow 220ms ease, border-color 220ms ease; }
+
+/* featured badge */
+.proj-badge { position: absolute; top: 12px; left: 12px; background: var(--green); color: #022; font-weight:700; padding:0.25rem 0.6rem; border-radius:999px; font-size:0.75rem; box-shadow: 0 6px 18px rgba(12,188,139,0.08); }
+
+/* keyboard focus */
+.proj-card:focus-within { outline: 3px solid rgba(12,188,139,0.08); outline-offset: 3px; }
 
 /* Project card background gradients */
 .p1 { background: linear-gradient(140deg, #0d1520, #152232); }
@@ -671,47 +903,25 @@ section {
 .p5 { background: linear-gradient(140deg, #0b1e30, #0f3254); }
 .p6 { background: linear-gradient(140deg, #1a0d2e, #2d1a4a); }
 
-.proj-overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(12, 188, 139, 0.88);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 0.4rem;
-  opacity: 0;
-  transition: opacity 0.35s;
-}
+.proj-body { padding: 1rem; display:flex; flex-direction:column; gap:0.6rem; }
+.proj-title { font-size: 1.05rem; font-weight: 800; color:var(--white); }
+.proj-desc { font-size: 0.92rem; color:var(--txt-dim); line-height:1.6; }
+.proj-tags { display:flex; gap:0.5rem; flex-wrap:wrap; }
+.proj-tags span { font-size:0.8rem; background: rgba(255,255,255,0.03); padding:0.35rem 0.6rem; border-radius:0.4rem; color:var(--txt); }
+.proj-actions { margin-top: 0.4rem; }
+.btn-outline { display:inline-block; padding:0.48rem 0.9rem; border-radius:0.45rem; border:1px solid rgba(255,255,255,0.06); color:var(--white); background:transparent; font-weight:600; }
 
-.proj-card:hover .proj-overlay {
-  opacity: 1;
-}
+/* persistent project-specific tech badges (non-hover) */
+.proj-tech { display:flex; gap:0.5rem; margin-top: 0.4rem; }
+.proj-tech .tech-item { font-size:0.78rem; background: rgba(255,255,255,0.02); padding:0.28rem 0.54rem; border-radius:0.36rem; color:var(--txt-dim); border:1px solid rgba(255,255,255,0.03); }
+.proj-card.p3 .proj-tech .tech-item { background: rgba(247,223,30,0.06); color: #222; border-color: rgba(247,223,30,0.08); }
 
-.proj-type {
-  font-size: 0.75rem;
-  color: rgba(255, 255, 255, 0.8);
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-}
-
-.proj-title {
-  font-size: 1.15rem;
-  font-weight: 700;
-  color: var(--white);
-}
-
-.proj-link {
-  margin-top: 0.35rem;
-  font-size: 0.8rem;
-  color: var(--white);
-  display: flex;
-  align-items: center;
-  gap: 0.3rem;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.6);
-  padding-bottom: 1px;
-  transition: opacity 0.2s;
-}
+/* project thumb background placeholders */
+.proj-thumb.p1 { background: linear-gradient(135deg,#0d1520,#152232); }
+.proj-thumb.p2 { background: linear-gradient(135deg,#0a1f12,#143820); }
+.proj-thumb.p3 { background: linear-gradient(135deg,#130d28,#221545); }
+.proj-thumb.p5 { background: linear-gradient(135deg,#0b1e30,#0f3254); }
+.proj-thumb.p6 { background: linear-gradient(135deg,#1a0d2e,#2d1a4a); }
 
 .proj-link:hover {
   opacity: 0.75;
