@@ -10,7 +10,7 @@ CSS
 JavaScript
 
 🌐 Deployment
-Deployed using Vercel
+Vercel
 
 🎯 Key Features
 Responsive design (mobile-friendly)
