@@ -4,16 +4,16 @@ This is my personal portfolio website built to showcase my skills, projects, and
 
 The portfolio highlights my experience in full-stack web development, with a focus on modern UI design and scalable applications. It includes sections such as About Me, Skills, Projects, and Contact.
 
-🚀 Tech Stack
-HTML
-CSS
+🚀 Tech Stack:
+HTML,
+CSS,
 JavaScript
 
-🌐 Deployment
+🌐 Deployment:
 Deployed using Vercel
 
 🎯 Key Features
-Responsive design (mobile-friendly)
-Modern UI/UX
-Organized project showcase
-Contact form integration
+1.Responsive design (mobile-friendly)
+2.Modern UI/UX
+3.Organized project showcase
+4.Contact form integration
